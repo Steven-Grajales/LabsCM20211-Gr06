@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LabsCM20211-Gr06</string>
+    <string name="next">Siguiente</string>
+    <string name="phone">Teléfono</string>
+    <string name="email">Email</string>
+    <string name="country">País</string>
+    <string name="city">Ciudad</string>
+    <string name="address">Dirección</string>
 </resources>
