@@ -1,8 +1,10 @@
 package co.edu.udea.compumovil.gr06_20211.lab1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 
 class PersonalDataActivity : AppCompatActivity() {
@@ -15,5 +17,11 @@ class PersonalDataActivity : AppCompatActivity() {
 
         var adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, lista)
         spinner.adapter = adaptador
+
+        var btnSiguiente = findViewById<Button>(R.id.button2)
+        btnSiguiente.setOnClickListener {
+            val intent = Intent(this, ContactDataActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

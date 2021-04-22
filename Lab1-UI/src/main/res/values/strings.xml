@@ -6,4 +6,20 @@
     <string name="country">País</string>
     <string name="city">Ciudad</string>
     <string name="address">Dirección</string>
+    <string name="contact_data_title">Información de contacto</string>
+    
+    <string-array name="countries">
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Brazil</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Ecuador</item>
+        <item>Guyana</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Suriname</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
 </resources>
