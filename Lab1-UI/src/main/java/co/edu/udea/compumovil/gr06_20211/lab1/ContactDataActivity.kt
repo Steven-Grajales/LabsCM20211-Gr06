@@ -27,7 +27,6 @@ class ContactDataActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityContactDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        println("create")
 
         val actionBar = supportActionBar
         actionBar!!.title = getString(R.string.contact_data_title)
@@ -44,18 +43,6 @@ class ContactDataActivity : AppCompatActivity(){
             val country = Country(binding.autocompleteCountry.text.toString().toLowerCase(Locale.getDefault()))
             getCitiesByCountry(country)
         }
-
-        /*binding.autocompleteCountry.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val country = Country(countries[position].toLowerCase(Locale.getDefault()))
-                println("listener")
-                getCitiesByCountry(country)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-            }
-
-        }*/
     }
 
     private fun getAPI():Retrofit{
@@ -83,5 +70,3 @@ class ContactDataActivity : AppCompatActivity(){
         }
     }
 }
-
-

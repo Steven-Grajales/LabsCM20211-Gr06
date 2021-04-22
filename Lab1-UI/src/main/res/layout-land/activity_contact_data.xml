@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/layoutContactData"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,12 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:hint="@string/phone"
             android:drawableStart="@drawable/ic_phone"
             android:drawableLeft="@drawable/ic_phone"
             android:drawablePadding="10dp"
-            android:imeOptions="actionNext"
+            android:imeOptions="actionNext|flagNoExtractUi"
             android:nextFocusDown="@id/txtEmail">
         </EditText>
 
@@ -31,13 +31,14 @@
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPhone"
             android:inputType="textEmailAddress"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:hint="@string/email"
             android:drawableStart="@drawable/ic_email"
             android:drawableLeft="@drawable/ic_email"
             android:drawablePadding="10dp"
-            android:imeOptions="actionNext"
+            android:imeOptions="actionNext|flagNoExtractUi"
             android:nextFocusDown="@id/autocompleteCountry">
         </EditText>
 
@@ -46,13 +47,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textAutoComplete"
-            android:layout_margin="10dp"
+            android:layout_below="@id/txtEmail"
+            android:layout_margin="5dp"
             android:hint="@string/country"
             android:drawableStart="@drawable/ic_country"
             android:drawableLeft="@drawable/ic_country"
             android:drawablePadding="10dp"
             android:completionThreshold="0"
-            android:imeOptions="actionNext"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:dropDownAnchor="@id/autocompleteCountry"
             android:nextFocusDown="@id/autocompleteCity">
         </AutoCompleteTextView>
 
@@ -60,14 +63,16 @@
             android:id="@+id/autocompleteCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/autocompleteCountry"
             android:inputType="textAutoComplete"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:hint="@string/city"
             android:drawableStart="@drawable/ic_city"
             android:drawableLeft="@drawable/ic_city"
             android:drawablePadding="10dp"
             android:completionThreshold="0"
-            android:imeOptions="actionNext"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:dropDownAnchor="@id/autocompleteCity"
             android:nextFocusDown="@id/txtAddress">
         </AutoCompleteTextView>
 
@@ -75,29 +80,24 @@
             android:id="@+id/txtAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/autocompleteCity"
             android:inputType="textNoSuggestions"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:hint="@string/address"
             android:drawableStart="@drawable/ic_address"
             android:drawableLeft="@drawable/ic_address"
             android:drawablePadding="10dp"
-            android:imeOptions="actionDone">
+            android:imeOptions="actionDone|flagNoExtractUi">
         </EditText>
-    </LinearLayout>
-
-    <RelativeLayout
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/next">
-        </Button>
     </RelativeLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
