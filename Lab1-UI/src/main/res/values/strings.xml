@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">LabsCM20211-Gr06</string>
+    <string name="dd_mm_aaaa">DD/MM/YYYY</string>
+    <string name="informacion_personal">Información Personal</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="sexo">Sexo: </string>
+    <string name="radio_hombre">Hombre</string>
+    <string name="radio_mujer">Mujer</string>
+    <string name="nacimiento">Fecha de nacimiento: </string>
+    <string name="btn_fecha">Cambiar</string>
+    <string name="btn_siguiente">Siguiente</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
