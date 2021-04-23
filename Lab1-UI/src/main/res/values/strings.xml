@@ -7,7 +7,8 @@
     <string name="city">Ciudad</string>
     <string name="address">Dirección</string>
     <string name="contact_data_title">Información de contacto</string>
-    
+    <string name="done">Finalizar</string>
+
     <string-array name="countries">
         <item>Argentina</item>
         <item>Bolivia</item>
