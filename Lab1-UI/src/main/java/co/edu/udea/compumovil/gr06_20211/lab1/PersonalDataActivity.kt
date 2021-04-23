@@ -22,13 +22,6 @@ class PersonalDataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_personal_data)
         listSpinner()
 
-       /* var btnSiguiente = findViewById<Button>(R.id.button_siguiente)
-        btnSiguiente.setOnClickListener {
-            addInfo()
-            val intent = Intent(this, ContactDataActivity::class.java)
-            startActivity(intent)
-        }*/
-
         radioGroup.setOnCheckedChangeListener{group, checkedID ->
 
             if(checkedID == R.id.radioButtonHombre)

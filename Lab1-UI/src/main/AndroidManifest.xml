@@ -11,15 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LabsCM20211Gr06">
-        <activity android:name=".ContactDataActivity" android:parentActivityName=".PersonalDataActivity"></activity>
-        <activity android:name=".PersonalDataActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".PersonalDataActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ContactDataActivity"
+            android:parentActivityName=".PersonalDataActivity" />
     </application>
 
 </manifest>
