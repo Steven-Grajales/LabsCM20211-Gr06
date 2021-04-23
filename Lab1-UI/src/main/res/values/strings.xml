@@ -10,4 +10,27 @@
     <string name="nacimiento">Fecha de nacimiento: </string>
     <string name="btn_fecha">Cambiar</string>
     <string name="btn_siguiente">Siguiente</string>
+    <string name="next">Siguiente</string>
+    <string name="phone">Teléfono</string>
+    <string name="email">Email</string>
+    <string name="country">País</string>
+    <string name="city">Ciudad</string>
+    <string name="address">Dirección</string>
+    <string name="contact_data_title">Información de contacto</string>
+    <string name="done">Finalizar</string>
+
+    <string-array name="countries">
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Brazil</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Ecuador</item>
+        <item>Guyana</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Suriname</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
 </resources>

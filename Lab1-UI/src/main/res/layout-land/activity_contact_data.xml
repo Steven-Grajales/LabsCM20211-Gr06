@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layoutContactData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/txtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_margin="5dp"
+            android:hint="@string/phone"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:nextFocusDown="@id/txtEmail">
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPhone"
+            android:inputType="textEmailAddress"
+            android:layout_margin="5dp"
+            android:hint="@string/email"
+            android:drawableStart="@drawable/ic_email"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:nextFocusDown="@id/autocompleteCountry">
+        </EditText>
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompleteCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:layout_below="@id/txtEmail"
+            android:layout_margin="5dp"
+            android:hint="@string/country"
+            android:drawableStart="@drawable/ic_country"
+            android:drawableLeft="@drawable/ic_country"
+            android:drawablePadding="10dp"
+            android:completionThreshold="0"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:dropDownAnchor="@id/autocompleteCountry"
+            android:nextFocusDown="@id/autocompleteCity">
+        </AutoCompleteTextView>
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompleteCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/autocompleteCountry"
+            android:inputType="textAutoComplete"
+            android:layout_margin="5dp"
+            android:hint="@string/city"
+            android:drawableStart="@drawable/ic_city"
+            android:drawableLeft="@drawable/ic_city"
+            android:drawablePadding="10dp"
+            android:completionThreshold="0"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:dropDownAnchor="@id/autocompleteCity"
+            android:nextFocusDown="@id/txtAddress">
+        </AutoCompleteTextView>
+
+        <EditText
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/autocompleteCity"
+            android:inputType="textNoSuggestions"
+            android:layout_margin="5dp"
+            android:hint="@string/address"
+            android:drawableStart="@drawable/ic_address"
+            android:drawableLeft="@drawable/ic_address"
+            android:drawablePadding="10dp"
+            android:imeOptions="actionDone|flagNoExtractUi">
+        </EditText>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

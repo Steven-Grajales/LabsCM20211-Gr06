@@ -1,5 +1,6 @@
 package co.edu.udea.compumovil.gr06_20211.lab1
 
+import android.content.Intent
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +21,13 @@ class PersonalDataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personal_data)
         listSpinner()
+
+       /* var btnSiguiente = findViewById<Button>(R.id.button_siguiente)
+        btnSiguiente.setOnClickListener {
+            addInfo()
+            val intent = Intent(this, ContactDataActivity::class.java)
+            startActivity(intent)
+        }*/
 
         radioGroup.setOnCheckedChangeListener{group, checkedID ->
 
@@ -86,7 +94,7 @@ class PersonalDataActivity : AppCompatActivity() {
         val inputNombres = findViewById<EditText>(R.id.EditTextNombres)
         val inputApellidos = findViewById<EditText>(R.id.editTextApellidos)
         var inputSexo = inputSexo
-        Log.i("nombres", inputNombres.toString())
+        Log.i("nombres", inputNombres.text.toString())
         Log.i("sexo", inputSexo)
         if(fechaLog != "vacio" && inputNombres.text.toString().isNotEmpty() && inputApellidos.text.toString().isNotEmpty()){
             Log.i("Nombres",   inputNombres.text.toString())
@@ -97,8 +105,11 @@ class PersonalDataActivity : AppCompatActivity() {
 
         }else{
             Toast.makeText(this, "Ingresar campos obligatorios", Toast.LENGTH_SHORT).show()
-        return}
+            return
+        }
         Toast.makeText(this, "Guardado!", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, ContactDataActivity::class.java)
+        startActivity(intent)
     }
 
 
