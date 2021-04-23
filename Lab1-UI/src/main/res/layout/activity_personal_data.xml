@@ -134,6 +134,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
+        android:onClick="addInfo"
         android:text="@string/btn_siguiente"
         android:textColor="#FFFFFF"
         app:backgroundTint="#009688"
