@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LabsCM20211-Gr06</string>
+    <string name="dd_mm_aaaa">DD/MM/YYYY</string>
+    <string name="informacion_personal">Personal Information</string>
+    <string name="nombres">Names</string>
+    <string name="apellidos">Last Name</string>
+    <string name="sexo">Gender: </string>
+    <string name="radio_hombre">Male</string>
+    <string name="radio_mujer">Female</string>
+    <string name="nacimiento">Date of birth: </string>
+    <string name="btn_fecha">Change</string>
+    <string name="btn_siguiente">Next</string>
+    <string name="next">Next</string>
+    <string name="phone">Cell Phone</string>
+    <string name="email">Email</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="address">Dirección</string>
+    <string name="contact_data_title">Contact information</string>
+    <string name="done">Done</string>
+
+    <string-array name="countries">
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Brazil</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Ecuador</item>
+        <item>Guyana</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Suriname</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
+</resources>
