@@ -48,12 +48,14 @@ class LoginFragment : Fragment() {
                             Observer { result ->
                                 Toast.makeText(requireContext(), "Bienvenido $user", Toast.LENGTH_LONG).show()
                                 findNavController().navigate(R.id.lugaresFragment)
-                                /*
+
                                 if(result != null && result.pass.equals(pass)){
                                     Toast.makeText(requireContext(), "Bienvenido $user", Toast.LENGTH_SHORT).show()
                                     findNavController().navigate(R.id.lugaresFragment)
+                                }else{
+                                    Toast.makeText(requireContext(), "Usuario o contraseña incorrecto", Toast.LENGTH_LONG).show()
                                 }
-                                 */
+
                             })
                     }
                 }
