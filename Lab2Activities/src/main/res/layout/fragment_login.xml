@@ -12,14 +12,14 @@
     tools:context=".ui.login.LoginFragment">
 
     <EditText
-        android:id="@+id/txt_username"
+        android:id="@+id/txt_username_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="350dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
-        android:hint="@string/prompt_email"
+        android:hint="@string/User"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toTopOf="@+id/txt_password"
@@ -39,7 +39,7 @@
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
-        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -68,11 +68,11 @@
         android:layout_marginBottom="120dp"
         android:text="SIGN IN"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_register"
+        app:layout_constraintEnd_toStartOf="@+id/btn_register_login"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_register_login"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginEnd="70dp"
@@ -87,7 +87,7 @@
         android:layout_width="335dp"
         android:layout_height="347dp"
 
-        app:layout_constraintBottom_toTopOf="@+id/txt_username"
+        app:layout_constraintBottom_toTopOf="@+id/txt_username_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

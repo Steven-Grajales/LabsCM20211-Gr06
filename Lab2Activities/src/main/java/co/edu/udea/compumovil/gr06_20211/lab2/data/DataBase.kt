@@ -9,7 +9,7 @@ import co.edu.udea.compumovil.gr06_20211.lab2.domain.UserDao
 import co.edu.udea.compumovil.gr06_20211.lab2.model.Lugares
 import co.edu.udea.compumovil.gr06_20211.lab2.model.User_Entity_Activity
 
-@Database(entities = [Lugares::class, User_Entity_Activity::class], version=3)
+@Database(entities = [Lugares::class, User_Entity_Activity::class], version = 1)
 abstract class DataBase: RoomDatabase() {
 
     abstract fun lugares(): LugaresDao

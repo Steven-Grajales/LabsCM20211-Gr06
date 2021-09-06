@@ -3,7 +3,7 @@ package co.edu.udea.compumovil.gr06_20211.lab2.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "lugares")
+@Entity(tableName = "POI")
 data class Lugares (
         val nombre: String = "",
         val informacion: String = "",
