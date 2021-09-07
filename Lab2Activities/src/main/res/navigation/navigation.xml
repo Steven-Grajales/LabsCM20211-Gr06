@@ -22,10 +22,21 @@
         <action
             android:id="@+id/action_lugaresFragment_to_fragment_detalles_lugar"
             app:destination="@id/fragment_detalles_lugar" />
+        <action
+            android:id="@+id/action_lugaresFragment_to_register_lugar"
+            app:destination="@id/fragment_register_lugar" />
+        <action
+            android:id="@+id/action_lugaresFragment_to_fragment_register_lugar"
+            app:destination="@id/fragment_register_lugar" />
     </fragment>
     <fragment
         android:id="@+id/fragment_detalles_lugar"
         android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.FragmentDetallesLugar"
         android:label="fragment_detalles_lugar"
         tools:layout="@layout/fragment_detalles_lugar" />
+    <fragment
+        android:id="@+id/fragment_register_lugar"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.register.RegisterSitesFragment"
+        android:label="fragment_register_lugar"
+        tools:layout="@layout/fragment_register_sites" />
 </navigation>

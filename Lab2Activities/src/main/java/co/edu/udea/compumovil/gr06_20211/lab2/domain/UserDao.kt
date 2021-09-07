@@ -1,9 +1,7 @@
 package co.edu.udea.compumovil.gr06_20211.lab2.domain
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import co.edu.udea.compumovil.gr06_20211.lab2.model.Lugares
 import co.edu.udea.compumovil.gr06_20211.lab2.model.User_Entity_Activity
 
@@ -19,5 +17,10 @@ interface UserDao {
     @Insert
     fun insert(user: User_Entity_Activity)
 
+    @Update
+    fun update(user: User_Entity_Activity)
+
+    @Delete
+    fun delete(user: User_Entity_Activity)
 
 }

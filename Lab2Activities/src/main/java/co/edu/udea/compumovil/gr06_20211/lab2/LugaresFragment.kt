@@ -67,11 +67,9 @@ class LugaresFragment : Fragment(), Adapter.OnSitioClickListener {
             })
         }
 
-        /*
         btn_insert_sitio.setOnClickListener{
-            findNavController().navigate(R.id)
+            findNavController().navigate(R.id.fragment_register_lugar)
         }
-*/
 
     }
 
