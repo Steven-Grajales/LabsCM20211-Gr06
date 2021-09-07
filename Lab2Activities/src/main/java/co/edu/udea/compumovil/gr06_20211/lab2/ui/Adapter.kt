@@ -35,7 +35,7 @@ class Adapter(private val context: Context, private val lugaresList:List<Lugares
 
     inner class MainViewHolder(itemView: View): BaseViewHolder<Lugares>(itemView){
         override fun bind(item: Lugares, position: Int) {
-            Glide.with(context).load(item.imagen).centerCrop().into(itemView.img_sitio)
+            Glide.with(context).load(item.imagen).centerCrop().into(itemView.img_lugar)
             itemView.txt_titulo.text = item.nombre
             itemView.txt_informacion.text = item.informacion
             itemView.setOnClickListener { itemClickLister.OnSitioClick(item)}
