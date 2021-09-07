@@ -18,5 +18,14 @@
         android:id="@+id/lugaresFragment"
         android:name="co.edu.udea.compumovil.gr06_20211.lab2.LugaresFragment"
         android:label="fragment_lugares"
-        tools:layout="@layout/fragment_lugares" />
+        tools:layout="@layout/fragment_lugares" >
+        <action
+            android:id="@+id/action_lugaresFragment_to_fragment_detalles_lugar"
+            app:destination="@id/fragment_detalles_lugar" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_detalles_lugar"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.FragmentDetallesLugar"
+        android:label="fragment_detalles_lugar"
+        tools:layout="@layout/fragment_detalles_lugar" />
 </navigation>

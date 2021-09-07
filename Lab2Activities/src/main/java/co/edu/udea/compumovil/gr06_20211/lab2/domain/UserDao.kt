@@ -13,9 +13,6 @@ interface UserDao {
     @Query("SELECT * FROM user WHERE user = :user")
     fun getUser(user: String): LiveData<User_Entity_Activity>
 
-    @Query("SELECT * FROM user WHERE user = :user or email = :email")
-    fun getUserAndEmail(user: String, email: String): LiveData<User_Entity_Activity>
-
     @Query("SELECT * FROM user")
     fun getAll(): LiveData<List<User_Entity_Activity>>
 
