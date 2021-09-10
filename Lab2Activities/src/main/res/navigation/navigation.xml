@@ -39,4 +39,8 @@
         android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.register.RegisterSitesFragment"
         android:label="fragment_register_lugar"
         tools:layout="@layout/fragment_register_sites" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

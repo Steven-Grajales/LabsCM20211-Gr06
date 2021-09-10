@@ -1,12 +1,12 @@
 package co.edu.udea.compumovil.gr06_20211.lab2.ui.register
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import co.edu.udea.compumovil.gr06_20211.lab2.R
 import co.edu.udea.compumovil.gr06_20211.lab2.data.DataBase
 import co.edu.udea.compumovil.gr06_20211.lab2.model.Lugares
@@ -26,7 +26,19 @@ class RegisterSitesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_register_sites, container, false)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.
+        onNavDestinationSelected(item,requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,7 +56,7 @@ class RegisterSitesFragment : Fragment() {
             if (nombre.isEmpty()||informacion.isEmpty()||temperatura.isEmpty()) {
                 Toast.makeText(requireContext(), "Por favor diligencie todos los campos", Toast.LENGTH_SHORT).show()
             }else {
-                val lugares = Lugares(nombre, imagen, informacion,temperatura)
+                val lugares = Lugares(nombre, imagen, informacion,"",temperatura)
                 Toast.makeText(requireContext(), "Nuevo registro de sitio guardado", Toast.LENGTH_SHORT).show()
 
                 CoroutineScope(Dispatchers.IO).launch {

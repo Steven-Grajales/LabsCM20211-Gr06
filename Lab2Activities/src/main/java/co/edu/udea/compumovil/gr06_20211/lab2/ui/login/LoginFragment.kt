@@ -50,7 +50,6 @@ class LoginFragment : Fragment() {
                         database.UserDao().getUser(user).observe(
                             viewLifecycleOwner,
                             Observer { result ->
-                                println(result)
                                 if(result != null && result.pass.equals(pass)){
                                     Toast.makeText(requireContext(), "Bienvenido $user", Toast.LENGTH_SHORT).show()
                                     findNavController().navigate(R.id.lugaresFragment)
