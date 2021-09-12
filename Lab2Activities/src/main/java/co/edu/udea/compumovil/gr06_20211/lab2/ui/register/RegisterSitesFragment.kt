@@ -1,13 +1,13 @@
 package co.edu.udea.compumovil.gr06_20211.lab2.ui.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import co.edu.udea.compumovil.gr06_20211.lab2.R
+import co.edu.udea.compumovil.gr06_20211.lab2.settings.SettingsActivity
 import co.edu.udea.compumovil.gr06_20211.lab2.data.DataBase
 import co.edu.udea.compumovil.gr06_20211.lab2.model.Lugares
 import kotlinx.android.synthetic.main.fragment_register_sites.*
@@ -32,6 +32,24 @@ class RegisterSitesFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (R.id.settings == item.itemId) {
+            toSettings()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun toSettings() {
+        val intent = Intent(activity, SettingsActivity::class.java)
+        startActivity(intent)
+    }
+/*
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.options_menu, menu)
     }
 
@@ -40,6 +58,8 @@ class RegisterSitesFragment : Fragment() {
         onNavDestinationSelected(item,requireView().findNavController())
                 || super.onOptionsItemSelected(item)
     }
+
+ */
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

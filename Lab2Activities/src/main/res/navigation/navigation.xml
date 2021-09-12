@@ -41,6 +41,20 @@
         tools:layout="@layout/fragment_register_sites" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="co.edu.udea.compumovil.gr06_20211.lab2.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.Settings2Fragment"
+        android:label="Settings2Fragment" >
+        <action
+            android:id="@+id/action_settings2Fragment_to_lugaresFragment"
+            app:destination="@id/lugaresFragment" />
+        <action
+            android:id="@+id/action_settings2Fragment_to_fragment_detalles_lugar"
+            app:destination="@id/fragment_detalles_lugar" />
+        <action
+            android:id="@+id/action_settings2Fragment_to_fragment_register_lugar"
+            app:destination="@id/fragment_register_lugar" />
+    </fragment>
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.SplashActivity"
+        android:label="SplashActivity" />
 </navigation>

@@ -9,14 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LabsCM20211Gr06">
-        <activity android:name=".ui.register.ActivityRegisterUser"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".splash_activity"
+            android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".ui.register.ActivityRegisterUser">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.edu.udea.compumovil.gr06_20211.lab2.ui.register.ActivityRegisterUser" />
+        </activity>
+        <activity android:name=".ui.register.ActivityRegisterUser" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
