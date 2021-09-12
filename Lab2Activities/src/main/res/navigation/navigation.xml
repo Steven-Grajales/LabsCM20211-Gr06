@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_loginFragment_to_lugaresFragment"
             app:destination="@id/lugaresFragment" />
+        <action
+                android:id="@+id/action_loginFragment_to_activityRegisterUser"
+                app:destination="@id/activityRegisterUser"
+                app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/lugaresFragment"
@@ -57,4 +61,9 @@
         android:id="@+id/splashActivity"
         android:name="co.edu.udea.compumovil.gr06_20211.lab2.SplashActivity"
         android:label="SplashActivity" />
+    <activity
+            android:id="@+id/activityRegisterUser"
+            android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.register.ActivityRegisterUser"
+            android:label="activity_register_user"
+            tools:layout="@layout/activity_register_user" />
 </navigation>

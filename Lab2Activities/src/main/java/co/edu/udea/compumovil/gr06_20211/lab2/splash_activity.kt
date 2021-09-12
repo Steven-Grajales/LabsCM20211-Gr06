@@ -21,8 +21,7 @@ class splash_activity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("Preferences", Context.MODE_PRIVATE)!!
 
         val intentMain =  Intent(this, MainActivity::class.java)
-        startActivity(intentMain)
-        /*
+
         if(!TextUtils.isEmpty(Util.getUserPrefs(sharedPreferences)) && !TextUtils.isEmpty(Util.getPassPrefs(sharedPreferences))){
             startActivity(intentMain)
         }else {
@@ -33,6 +32,5 @@ class splash_activity : AppCompatActivity() {
         }
         finish()
 
-         */
     }
 }
