@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_lugaresFragment"
+            app:destination="@id/lugaresFragment" />
+        <action
+                android:id="@+id/action_loginFragment_to_activityRegisterUser"
+                app:destination="@id/activityRegisterUser"
+                app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lugaresFragment"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.LugaresFragment"
+        android:label="fragment_lugares"
+        tools:layout="@layout/fragment_lugares" >
+        <action
+            android:id="@+id/action_lugaresFragment_to_fragment_detalles_lugar"
+            app:destination="@id/fragment_detalles_lugar" />
+        <action
+            android:id="@+id/action_lugaresFragment_to_register_lugar"
+            app:destination="@id/fragment_register_lugar" />
+        <action
+            android:id="@+id/action_lugaresFragment_to_fragment_register_lugar"
+            app:destination="@id/fragment_register_lugar" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_detalles_lugar"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.FragmentDetallesLugar"
+        android:label="fragment_detalles_lugar"
+        tools:layout="@layout/fragment_detalles_lugar" />
+    <fragment
+        android:id="@+id/fragment_register_lugar"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.register.RegisterSitesFragment"
+        android:label="fragment_register_lugar"
+        tools:layout="@layout/fragment_register_sites" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.Settings2Fragment"
+        android:label="Settings2Fragment" >
+        <action
+            android:id="@+id/action_settings2Fragment_to_lugaresFragment"
+            app:destination="@id/lugaresFragment" />
+        <action
+            android:id="@+id/action_settings2Fragment_to_fragment_detalles_lugar"
+            app:destination="@id/fragment_detalles_lugar" />
+        <action
+            android:id="@+id/action_settings2Fragment_to_fragment_register_lugar"
+            app:destination="@id/fragment_register_lugar" />
+    </fragment>
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="co.edu.udea.compumovil.gr06_20211.lab2.SplashActivity"
+        android:label="SplashActivity" />
+    <activity
+            android:id="@+id/activityRegisterUser"
+            android:name="co.edu.udea.compumovil.gr06_20211.lab2.ui.register.ActivityRegisterUser"
+            android:label="activity_register_user"
+            tools:layout="@layout/activity_register_user" />
+</navigation>
